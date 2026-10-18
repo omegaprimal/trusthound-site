@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — Trust Hound</title>
+<meta name="description" content="How the Trust Hound Chrome extension handles your data.">
+<link rel="icon" href="icon128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="icon128.png" alt="">Trust Hound</a>
+    <nav>
+      <a href="/#how">How it works</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="doc">
+  <h1>Privacy policy</h1>
+  <p class="updated">Effective October 16, 2026</p>
+
+  <div class="summary">
+    <p><strong>The short version:</strong> Trust Hound has no servers, no accounts and no tracking. When it checks a post, it sends that post's text, captions, a couple of video still frames and a text version of what was said, straight from your browser to Anthropic, the company that makes the Claude AI, using your own API key. Video sound is turned into text on your own computer and never uploaded. Your settings and results stay in your browser. We never see or sell your data.</p>
+  </div>
+
+  <h2>Who we are</h2>
+  <p>Trust Hound is a Chrome extension that flags false and misleading claims in social media posts and videos. In this policy, "we" means the developer of Trust Hound. You can reach us at <a href="mailto:support@trusthound.dog">support@trusthound.dog</a>.</p>
+
+  <h2>What Trust Hound reads</h2>
+  <p>Trust Hound only runs on the sites you allow in its settings (Facebook, X, Instagram, Threads, TikTok, Reddit and YouTube by default). On those sites, when a post stays on your screen for about a second, Trust Hound reads:</p>
+  <ul>
+    <li>The visible text of that post, such as its caption or message.</li>
+    <li>For videos, any captions shown while it plays, and up to two still images from the video so that words shown on screen can be read.</li>
+    <li>For videos, if voice listening is on, the video's own sound for up to about 12 seconds while it plays.</li>
+  </ul>
+  <p>It does not read your private messages, your passwords, forms you fill out, or pages on other websites. It never uses your microphone.</p>
+
+  <h2>How video sound is handled</h2>
+  <p>When voice listening is on, Trust Hound turns a video's speech into text using a speech recognition model that runs entirely on your computer. <strong>The audio is never uploaded or saved.</strong> It is discarded as soon as it has been turned into text. Only that text is used in the check described below.</p>
+  <p>Some sites, such as Instagram, play videos straight from their media servers in a way that stops extensions from reading the video's sound or pictures on the page. For those videos, Trust Hound downloads the start of the same video file (the part your browser is already playing) from the site's media server, takes the speech and two still images from it on your computer, and then discards the file. Nothing about you is sent with that download.</p>
+  <p>The first time listening is used, Trust Hound downloads the speech model (Whisper, made available on Hugging Face) once and stores it in your browser. That download doesn't include any information about you. You can turn listening off in settings at any time.</p>
+
+  <h2>Where that information goes</h2>
+  <p>To check a post, Trust Hound sends the post text, captions, still images and the text of what was said (never the audio itself), plus the name of the site, directly from your browser to Anthropic's Claude API. The request uses an API key that you create and enter yourself. Anthropic's AI decides whether the post contains a checkable claim and, if it does, searches the web for reliable sources and returns a verdict.</p>
+  <p>Trust Hound does not send the address of the page, your name, your account details on the social site, or your browsing history.</p>
+  <p>The information goes only to Anthropic. It does not pass through any server we run, because we don't run one. Anthropic handles this data under its own terms and privacy policy, which you can read at <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>.</p>
+
+  <h2>What is stored on your computer</h2>
+  <p>Trust Hound uses your browser's local extension storage to keep:</p>
+  <ul>
+    <li><strong>Your settings</strong>, including your Claude API key, which sites are on, and your daily spending cap.</li>
+    <li><strong>Recent results</strong> for up to about 400 posts, so the same post isn't checked and paid for twice. This includes the verdict, a short summary of the claims, and source links.</li>
+    <li><strong>Spending totals</strong> for today and overall, so the extension can enforce your daily cap.</li>
+  </ul>
+  <p>This data stays in your browser on this computer. It isn't synced to your Google account and we can't access it. Your API key is only ever sent to Anthropic, as part of check requests.</p>
+
+  <h2>What we don't do</h2>
+  <ul>
+    <li>We don't collect analytics, usage statistics or crash reports.</li>
+    <li>We don't create accounts or collect your name or email address.</li>
+    <li>We don't sell, rent or share your data with anyone, and we don't use it for advertising.</li>
+    <li>We don't use your data to decide whether you're creditworthy or for lending purposes.</li>
+  </ul>
+
+  <h2>Chrome Web Store user data policy</h2>
+  <p>Trust Hound's use of information received from Chrome extension APIs follows the Chrome Web Store User Data Policy, including its Limited Use requirements. Page content is used only to provide the extension's single purpose, checking claims in posts you view, and is not transferred to anyone other than Anthropic for that purpose.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li>Turn off any site, or turn off video checking, still images or voice listening, in Trust Hound's settings.</li>
+    <li>Switch to manual mode so nothing is checked until you tap "Check this."</li>
+    <li>Use "Clear saved results" in settings to delete stored results.</li>
+    <li>Uninstall the extension to remove all of its stored data, including your API key, from your browser.</li>
+    <li>Delete or replace your API key at any time in your Anthropic account.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>Trust Hound is not directed at children under 13, and we don't knowingly collect information from them.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If Trust Hound changes how it handles data, for example by offering a paid version that runs through our own servers, we'll update this policy before that change takes effect and change the date at the top.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy? Email <a href="mailto:support@trusthound.dog">support@trusthound.dog</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Trust Hound</span>
+    <span><a href="/">Home</a> &nbsp;&nbsp; <a href="mailto:support@trusthound.dog">support@trusthound.dog</a></span>
+  </div>
+</footer>
+</body>
+</html>

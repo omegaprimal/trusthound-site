@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trust Hound — your feed's loyal watchdog</title>
+<meta name="description" content="Trust Hound is a Chrome extension that flags false and misleading claims in social media posts and videos as you scroll, with sources for every verdict.">
+<meta property="og:title" content="Trust Hound — your feed's loyal watchdog">
+<meta property="og:description" content="Flags false and misleading posts and videos as you scroll, with sources for every verdict.">
+<meta property="og:image" content="https://trusthound.dog/icon128.png">
+<link rel="icon" href="icon128.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="icon128.png" alt="">Trust Hound</a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Your feed's loyal watchdog.</h1>
+        <p class="lede">Trust Hound reads along while you scroll Facebook, X, YouTube and more. When a post or video makes a claim that doesn't hold up, it puts a badge on it, with the sources so you can see for yourself.</p>
+        <a class="cta" href="mailto:support@trusthound.dog?subject=Tell%20me%20when%20Trust%20Hound%20launches">Tell me when it launches</a>
+        <span class="cta-note">Coming soon to the Chrome Web Store.</span>
+      </div>
+
+      <div class="demo">
+        <article class="post" aria-label="Example post with a Trust Hound badge">
+          <span class="pill-sniffing" aria-hidden="true">🐕 Sniffing…</span>
+          <button class="pill" type="button" aria-expanded="false" aria-controls="verdict">❌ False</button>
+          <div class="verdict" id="verdict">
+            <p>Health agencies say there's no evidence lemon water cures the flu. It can help you stay hydrated, but flu usually lasts several days.</p>
+            <p class="src">In the real extension, links to each source appear here.</p>
+          </div>
+          <div class="post-head">
+            <div class="avatar" aria-hidden="true"></div>
+            <div>
+              <div class="post-name">Healthy Living Daily</div>
+              <div class="post-meta">2h · Shared 48K times</div>
+            </div>
+          </div>
+          <p class="post-body">Doctors don't want you to know this! 🍋 Hot lemon water cures the flu in 24 hours. Share before they take it down!!</p>
+          <div class="post-img" aria-hidden="true"></div>
+          <div class="post-stats">👍 12K &nbsp; 💬 3.1K comments</div>
+        </article>
+        <p class="demo-caption">An example of what you'd see. Tap the badge.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="how">
+    <div class="wrap">
+      <h2>How it sniffs things out</h2>
+      <p class="intro">You scroll the way you always do. Trust Hound only speaks up when something deserves a closer look.</p>
+      <ol class="steps">
+        <li>
+          <h3>It notices what you stop on</h3>
+          <p>Posts you scroll right past are ignored. When you pause on one, Trust Hound reads the text. For videos it also reads the captions and any words on screen, and listens to what's said, right on your computer.</p>
+        </li>
+        <li>
+          <h3>It sorts what it finds</h3>
+          <p>Opinions, jokes and politics are left alone. Claims about health, money, scams and safety get checked right away. Everything else gets a badge you can tap.</p>
+        </li>
+        <li>
+          <h3>It checks and shows its work</h3>
+          <p>Trust Hound searches reliable sources and puts a badge on the post. Tap the badge for a plain-English explanation and links to every source.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>What the badges mean</h2>
+      <p class="intro">A badge is a nudge to look closer, not the final word. Every one comes with its sources.</p>
+      <table class="legend">
+        <tr><td><span class="badge b-false">❌ False</span></td><td>Reliable sources clearly say otherwise.</td></tr>
+        <tr><td><span class="badge b-mis">⚠️ Misleading</span></td><td>Partly true, but missing context that changes the meaning, or exaggerated.</td></tr>
+        <tr><td><span class="badge b-mixed">🟡 Mixed</span></td><td>Some claims in the post hold up and some don't.</td></tr>
+        <tr><td><span class="badge b-mis">⚠️ Unproven claim</span></td><td>The only support is the seller's own marketing or numbers. Common in ads.</td></tr>
+        <tr><td><span class="badge b-ok">✅ Checks out</span></td><td>Reliable sources back it up.</td></tr>
+        <tr><td><span class="badge b-unk">❓ Can't verify</span></td><td>Too new or too little evidence to say. Trust Hound won't guess.</td></tr>
+        <tr><td><span class="badge b-claim">🔍 Claim found</span></td><td>A claim on a lower-stakes topic, like a fun science fact. Tap it if you want it checked.</td></tr>
+        <tr><td><span class="badge b-personal">👤 Personal claim</span></td><td>Something only the poster can prove, like "I make $1,000 a week." Trust Hound tells you if the post is also selling something.</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>It checks the ads, too</h2>
+      <p class="intro">Ads are where a lot of the worst claims live: miracle products, fake celebrity endorsements, get-rich schemes. Trust Hound always checks posts and videos marked Sponsored or Ad, tags them clearly, and points out how the ad is trying to sell to you, like fake urgency or testimonials nobody can verify.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>What it leaves alone</h2>
+      <p class="intro">Trust Hound is here to catch hoaxes and scams, not to argue with you.</p>
+      <div class="leave-grid leave">
+        <div>
+          <h3>Politics</h3>
+          <p>Posts about elections, politicians, parties and hot-button issues are skipped by default. No badge, no check.</p>
+        </div>
+        <div>
+          <h3>Opinions and jokes</h3>
+          <p>Your uncle's hot take, memes and satire aren't claims of fact, so they don't get a badge.</p>
+        </div>
+        <div>
+          <h3>Your private stuff</h3>
+          <p>No account, no tracking, no ads. Trust Hound doesn't collect your browsing or sell anything about you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <h2>Works where you scroll</h2>
+      <p class="intro">Turn any of these on or off in settings.</p>
+      <ul class="sites">
+        <li>Facebook</li><li>YouTube</li><li>X</li><li>Instagram</li><li>TikTok</li><li>Reddit</li><li>Threads</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="key">
+        <div>
+          <h2>Pay only for what it checks</h2>
+          <p>Trust Hound runs on Claude, an AI from Anthropic. You connect your own Claude account, so you pay Anthropic directly for the checks you use, with nothing added on top.</p>
+          <p>For most people that's a few cents to about a dollar a day.</p>
+        </div>
+        <ul>
+          <li><strong>Daily spending cap</strong> so it can never run up a surprise bill</li>
+          <li><strong>Each post is checked once</strong>, even if you see it again</li>
+          <li><strong>Tap-to-check mode</strong> if you'd rather choose what gets checked</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Trust Hound</span>
+    <span><a href="privacy.html">Privacy policy</a> &nbsp;&nbsp; <a href="mailto:support@trusthound.dog">support@trusthound.dog</a></span>
+  </div>
+</footer>
+
+<script>
+  // The demo badge expands just like the real one.
+  const pill = document.querySelector('.pill');
+  const verdict = document.getElementById('verdict');
+  pill.addEventListener('click', () => {
+    const open = verdict.classList.toggle('open');
+    pill.setAttribute('aria-expanded', String(open));
+  });
+</script>
+</body>
+</html>
