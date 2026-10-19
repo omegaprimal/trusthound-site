@@ -38,6 +38,7 @@
   <p>Trust Hound only runs on the sites you allow in its settings (Facebook, X, Instagram, Threads, TikTok, Reddit and YouTube by default). On those sites, when a post stays on your screen for about a second, Trust Hound reads:</p>
   <ul>
     <li>The visible text of that post, such as its caption or message.</li>
+    <li>The web address a post links to, if it shares a link to an article or website.</li>
     <li>Up to two of the post's own pictures, so that text inside them (a screenshot of a headline, a meme caption, a chart) can be read. Profile pictures and icons are left out.</li>
     <li>For videos, any captions shown while it plays, and up to two still images from the video so that words shown on screen can be read.</li>
     <li>For videos, if voice listening is on, the video's own sound for up to about 12 seconds while it plays.</li>
@@ -51,6 +52,7 @@
 
   <h2>Where that information goes</h2>
   <p>To check a post, Trust Hound sends the post text, captions, still images, the post's pictures and the text of what was said (never the audio itself), plus the name of the site, directly from your browser to Anthropic's Claude API. The request uses an API key that you create and enter yourself. Anthropic's AI decides whether the post contains a checkable claim and, if it does, searches the web for reliable sources and returns a verdict.</p>
+  <p>When a post links to an article, Anthropic's AI may open that public article once to see whether the post describes it accurately. Trust Hound keeps short lists of known satire sites and of sites fact-checkers have repeatedly flagged, and mentions a match to the AI; the lists are built into the extension and nothing is looked up elsewhere.</p>
   <p>When a picture can't be read on your computer because the site doesn't allow it, Trust Hound sends Anthropic the picture's public web address instead, and Anthropic's servers open that picture directly. That address points to the picture only, not to you or your account.</p>
   <p>Trust Hound does not send the address of the page, your name, your account details on the social site, or your browsing history.</p>
   <p>The information goes only to Anthropic. It does not pass through any server we run, because we don't run one. Anthropic handles this data under its own terms and privacy policy, which you can read at <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>.</p>
