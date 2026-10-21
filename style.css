@@ -134,7 +134,7 @@ h2 { font: 800 clamp(32px, 4vw, 46px)/1.05 var(--display); letter-spacing: -0.02
 .b-claim { color: #1a73e8; } .b-personal { color: #7a5c3e; }
 
 /* what it leaves alone */
-.leave-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+.leave-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
 .leave div { border-left: 4px solid var(--moss); padding-left: 20px; }
 
 /* sites */
