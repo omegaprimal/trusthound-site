@@ -25,10 +25,10 @@
 
 <main class="doc">
   <h1>Privacy policy</h1>
-  <p class="updated">Effective October 19, 2026</p>
+  <p class="updated">Effective November 4, 2026</p>
 
   <div class="summary">
-    <p><strong>The short version:</strong> Trust Hound has no servers, no accounts and no tracking. When it checks a post, it sends that post's text, captions, a couple of video still frames and a text version of what was said, straight from your browser to Anthropic, the company that makes the Claude AI, using your own API key. Video sound is turned into text on your own computer and never uploaded. Your settings and results stay in your browser. We never see or sell your data.</p>
+    <p><strong>The short version:</strong> Trust Hound has no tracking and no ads. When it checks a post, it sends that post's text, captions, a couple of video still frames and a text version of what was said to Anthropic, the company that makes the Claude AI. With the free version that goes straight from your browser using your own API key. With Trust Hound Pro it passes through our server, which counts your checks and doesn't keep the post. Video sound is turned into text on your own computer and never uploaded. Your settings and results stay in your browser. We never sell your data.</p>
   </div>
 
   <h2>Who we are</h2>
@@ -51,31 +51,44 @@
   <p>The first time listening is used, Trust Hound downloads the speech model (Whisper, made available on Hugging Face) once and stores it in your browser. That download doesn't include any information about you. You can turn listening off in settings at any time.</p>
 
   <h2>Where that information goes</h2>
-  <p>To check a post, Trust Hound sends the post text, captions, still images, the post's pictures and the text of what was said (never the audio itself), plus the name of the site, directly from your browser to Anthropic's Claude API. The request uses an API key that you create and enter yourself. Anthropic's AI decides whether the post contains a checkable claim and, if it does, searches the web for reliable sources and returns a verdict.</p>
+  <p>To check a post, Trust Hound sends the post text, captions, still images, the post's pictures and the text of what was said (never the audio itself), plus the name of the site, to Anthropic's Claude API. Anthropic's AI decides whether the post contains a checkable claim and, if it does, searches the web for reliable sources and returns a verdict.</p>
   <p>When a post links to an article, Anthropic's AI may open that public article once to see whether the post describes it accurately. Trust Hound keeps short lists of known satire sites and of sites fact-checkers have repeatedly flagged, and mentions a match to the AI; the lists are built into the extension and nothing is looked up elsewhere.</p>
   <p>When a picture can't be read on your computer because the site doesn't allow it, Trust Hound sends Anthropic the picture's public web address instead, and Anthropic's servers open that picture directly. That address points to the picture only, not to you or your account.</p>
   <p>Trust Hound does not send the address of the page, your name, your account details on the social site, or your browsing history.</p>
-  <p>The information goes only to Anthropic. It does not pass through any server we run, because we don't run one. Anthropic handles this data under its own terms and privacy policy, which you can read at <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>.</p>
+
+  <h3>If you use your own Claude API key (free)</h3>
+  <p>Checks go directly from your browser to Anthropic using the API key you created and entered yourself. They don't pass through any server we run.</p>
+
+  <h3>If you use Trust Hound Pro (paid, or the free trial)</h3>
+  <p>Checks go from your browser to the Trust Hound Pro server, which we run on Cloudflare, and from there to Anthropic using our own API key. The server:</p>
+  <ul>
+    <li>Passes the post's content straight through to Anthropic and back, and does not store it.</li>
+    <li>Confirms you have an active trial or subscription by looking up your ExtensionPay ID (a random code created for your copy of Trust Hound) with ExtensionPay.</li>
+    <li>Keeps a count of the checks you've used this month, any extra checks you've bought, and a one-way scrambled code (a hash) of your ExtensionPay ID and of your trial email address, so the trial can only be used once per email. It does not store your email address, your name, or the posts you read.</li>
+  </ul>
+  <p>Payments are handled by <strong>ExtensionPay</strong> and <strong>Stripe</strong>. When you start a trial or subscribe, you give your email address and payment details to them, not to us; we never see your card number. ExtensionPay tells Trust Hound whether your subscription is active. If you buy extra checks, Stripe tells our server that the purchase succeeded using a random buyer code, so the checks can be added to your account. ExtensionPay's privacy policy is at <a href="https://extensionpay.com/privacy">extensionpay.com/privacy</a> and Stripe's is at <a href="https://stripe.com/privacy">stripe.com/privacy</a>.</p>
+  <p>Post content goes only to Anthropic (through our server for Pro). Anthropic handles this data under its own terms and privacy policy, which you can read at <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a>.</p>
 
   <h2>What is stored on your computer</h2>
   <p>Trust Hound uses your browser's local extension storage to keep:</p>
   <ul>
-    <li><strong>Your settings</strong>, including your Claude API key, which sites are on, and your daily spending cap.</li>
+    <li><strong>Your settings</strong>, including your Claude API key if you use one, which sites are on, and your daily spending cap.</li>
+    <li><strong>Your Pro status</strong>, if you use Pro: your plan, checks left and the date they refill.</li>
     <li><strong>Recent results</strong> for up to about 400 posts, so the same post isn't checked and paid for twice. This includes the verdict, a short summary of the claims, and source links.</li>
     <li><strong>Spending totals</strong> for today and overall, so the extension can enforce your daily cap.</li>
   </ul>
-  <p>This data stays in your browser on this computer. It isn't synced to your Google account and we can't access it. Your API key is only ever sent to Anthropic, as part of check requests.</p>
+  <p>This data stays in your browser on this computer and we can't access it. Your API key is only ever sent to Anthropic, as part of check requests. If you start a trial or subscribe, ExtensionPay saves your ExtensionPay ID in Chrome's synced extension storage, so your subscription follows you to other computers where you're signed in to Chrome.</p>
 
   <h2>What we don't do</h2>
   <ul>
     <li>We don't collect analytics, usage statistics or crash reports.</li>
-    <li>We don't create accounts or collect your name or email address.</li>
+    <li>We don't collect your name, and we don't keep your email address. (If you use Pro, ExtensionPay has it, for your subscription.)</li>
     <li>We don't sell, rent or share your data with anyone, and we don't use it for advertising.</li>
     <li>We don't use your data to decide whether you're creditworthy or for lending purposes.</li>
   </ul>
 
   <h2>Chrome Web Store user data policy</h2>
-  <p>Trust Hound's use of information received from Chrome extension APIs follows the Chrome Web Store User Data Policy, including its Limited Use requirements. Page content is used only to provide the extension's single purpose, checking claims in posts you view, and is not transferred to anyone other than Anthropic for that purpose.</p>
+  <p>Trust Hound's use of information received from Chrome extension APIs follows the Chrome Web Store User Data Policy, including its Limited Use requirements. Page content is used only to provide the extension's single purpose, checking claims in posts you view, and is not transferred to anyone other than Anthropic (through our Pro server, for Pro users) for that purpose.</p>
 
   <h2>Your choices</h2>
   <ul>
@@ -84,13 +97,14 @@
     <li>Use "Clear saved results" in settings to delete stored results.</li>
     <li>Uninstall the extension to remove all of its stored data, including your API key, from your browser.</li>
     <li>Delete or replace your API key at any time in your Anthropic account.</li>
+    <li>Cancel Pro any time from "Manage subscription" in Trust Hound's settings. To have your check counts deleted from our server, email us.</li>
   </ul>
 
   <h2>Children</h2>
   <p>Trust Hound is not directed at children under 13, and we don't knowingly collect information from them.</p>
 
   <h2>Changes to this policy</h2>
-  <p>If Trust Hound changes how it handles data, for example by offering a paid version that runs through our own servers, we'll update this policy before that change takes effect and change the date at the top.</p>
+  <p>If Trust Hound changes how it handles data, we'll update this policy before that change takes effect and change the date at the top.</p>
 
   <h2>Contact</h2>
   <p>Questions about privacy? Email <a href="mailto:support@trusthound.dog">support@trusthound.dog</a>.</p>
