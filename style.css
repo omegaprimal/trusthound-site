@@ -183,3 +183,17 @@ footer a:hover { color: #fff; }
   .wrap { padding: 0 16px; }
   .bar nav a:first-child { display: none; }
 }
+.doc h3 { font-size: 20px; margin: 28px 0 8px; }
+
+/* Pricing */
+.plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 24px; }
+@media (max-width: 760px) { .plans { grid-template-columns: 1fr; } }
+.plan-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 26px 26px 22px; }
+.plan-card.featured { border: 2px solid var(--brass); }
+.plan-card h3 { font: 700 23px/1.2 var(--display); margin: 0 0 6px; }
+.plan-card .price { font: 800 34px/1.1 var(--display); margin: 8px 0 2px; }
+.plan-card .price small { font-size: 16px; font-weight: 400; font-family: inherit; color: var(--muted); }
+.plan-card .tagline { color: var(--muted); margin: 0 0 14px; }
+.plan-card ul { padding-left: 20px; margin: 0; }
+.plan-card li { margin: 6px 0; line-height: 1.5; }
+.plans-note { color: var(--muted); margin-top: 18px; }
